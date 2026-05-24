@@ -21,11 +21,12 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v4
         with:
           role-to-assume: arn:aws:iam::082827114873:role/github-actions-dmi-deploy
-          aws-region: eu-west-1
+          aws-region: us-east-1
 
       - name: Sync to S3
         run: |
           aws s3 sync . s3://dmi.pravinmishra.com \
+            --region eu-west-1 \
             --exclude ".git/*" \
             --exclude ".github/*" \
             --exclude "*.md" \
