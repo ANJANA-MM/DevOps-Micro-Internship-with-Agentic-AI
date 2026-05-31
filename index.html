@@ -198,6 +198,45 @@
       .mentor-inner { flex-direction: column; text-align: center; }
       .mentor-stats { justify-content: center; }
     }
+
+    /* Teaching Team */
+    .team-hierarchy { display: flex; flex-direction: column; align-items: center; gap: 0; }
+    .team-tier { display: flex; justify-content: center; width: 100%; }
+    .team-connector {
+      width: 2px; height: 2rem; background: var(--accent); opacity: 0.4; margin: 0 auto;
+    }
+    .team-card {
+      background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+      padding: 1.5rem 1.25rem; text-align: center; transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .team-card:hover { border-color: var(--accent); box-shadow: 0 4px 16px rgba(232,160,32,0.12); }
+    .team-card--instructor { border: 2px solid var(--accent); max-width: 260px; width: 100%; }
+    .team-card--colead { border: 1.5px solid var(--accent-border); max-width: 240px; width: 100%; }
+    .team-card--comentor { flex: 1 1 180px; min-width: 150px; max-width: 210px; }
+    .team-grid {
+      display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;
+      max-width: 900px; width: 100%;
+    }
+    .team-avatar {
+      width: 72px; height: 72px; border-radius: 50%; margin: 0 auto 0.75rem;
+      overflow: hidden; display: flex; align-items: center; justify-content: center;
+      font-size: 1.35rem; font-weight: 700; color: #fff; letter-spacing: 0.5px;
+    }
+    .team-avatar img { width: 100%; height: 100%; object-fit: cover; }
+    .team-avatar--sm { width: 56px; height: 56px; font-size: 1rem; }
+    .team-role-badge {
+      display: inline-block; font-size: 0.65rem; font-weight: 700; letter-spacing: 1.5px;
+      text-transform: uppercase; color: var(--accent); background: var(--accent-light);
+      border: 1px solid var(--accent-border); border-radius: 20px;
+      padding: 0.2rem 0.7rem; margin-bottom: 0.6rem;
+    }
+    .team-role-badge--colead { color: var(--text-muted); background: var(--bg-card2); border-color: var(--border); }
+    .team-role-badge--comentor { color: var(--text-muted); background: var(--bg-card2); border-color: var(--border); font-size: 0.6rem; }
+    .team-card h3 { font-size: 0.95rem; font-weight: 700; color: var(--text); margin: 0 0 0.25rem; }
+    .team-card p { font-size: 0.78rem; color: var(--text-muted); margin: 0; }
+    @media (max-width: 640px) {
+      .team-card--comentor { flex: 1 1 140px; }
+    }
   </style>
 </head>
 <body>
@@ -335,12 +374,114 @@
   </div>
 </section>
 
+<!-- TEACHING TEAM -->
+<section style="padding: 4rem 2rem 5rem; background: var(--bg-section); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+  <div class="container">
+    <div class="section-label">Teaching Team</div>
+    <h2 class="section-title">Meet Your Cohort 3 <span style="color:var(--accent)">Mentors</span></h2>
+    <p class="section-sub">The team guiding you from zero to production-ready DevOps</p>
+
+    <div class="team-hierarchy" style="margin-top:2.5rem;">
+
+      <!-- Instructor -->
+      <div class="team-tier">
+        <div class="team-card team-card--instructor">
+          <div class="team-avatar" style="background:#E8A020;">
+            <img src="images/pravin-mishra.jpg" alt="Pravin Mishra">
+          </div>
+          <div class="team-role-badge">Instructor</div>
+          <h3>Pravin Mishra</h3>
+          <p>Program Director &amp; Lead Instructor</p>
+        </div>
+      </div>
+
+      <div class="team-connector"></div>
+
+      <!-- Lead Co-Mentor -->
+      <div class="team-tier">
+        <div class="team-card team-card--colead">
+          <div class="team-avatar" style="background:#6366f1;">AM</div>
+          <div class="team-role-badge team-role-badge--colead">Lead Co-Mentor</div>
+          <h3>Anjana Muthunyake</h3>
+          <p>Specialization TBC</p>
+        </div>
+      </div>
+
+      <div class="team-connector"></div>
+
+      <!-- Co-Mentors -->
+      <div class="team-tier">
+        <div class="team-grid">
+
+          <div class="team-card team-card--comentor">
+            <div class="team-avatar team-avatar--sm" style="background:#0ea5e9;">SF</div>
+            <div class="team-role-badge team-role-badge--comentor">Co-Mentor</div>
+            <h3>Samson Faith Ajanigo</h3>
+            <p>Specialization TBC</p>
+          </div>
+
+          <div class="team-card team-card--comentor">
+            <div class="team-avatar team-avatar--sm" style="background:#10b981;">TB</div>
+            <div class="team-role-badge team-role-badge--comentor">Co-Mentor</div>
+            <h3>Tanisha Borana</h3>
+            <p>Specialization TBC</p>
+          </div>
+
+          <div class="team-card team-card--comentor">
+            <div class="team-avatar team-avatar--sm" style="background:#f43f5e;">RK</div>
+            <div class="team-role-badge team-role-badge--comentor">Co-Mentor</div>
+            <h3>Ranbir Kaur</h3>
+            <p>Specialization TBC</p>
+          </div>
+
+          <div class="team-card team-card--comentor">
+            <div class="team-avatar team-avatar--sm" style="background:#8b5cf6;">RU</div>
+            <div class="team-role-badge team-role-badge--comentor">Co-Mentor</div>
+            <h3>Rukevwe Ubioworo</h3>
+            <p>Specialization TBC</p>
+          </div>
+
+          <div class="team-card team-card--comentor">
+            <div class="team-avatar team-avatar--sm" style="background:#f97316;">AI</div>
+            <div class="team-role-badge team-role-badge--comentor">Co-Mentor</div>
+            <h3>Anuradha Iyer</h3>
+            <p>Specialization TBC</p>
+          </div>
+
+          <div class="team-card team-card--comentor">
+            <div class="team-avatar team-avatar--sm" style="background:#06b6d4;">NA</div>
+            <div class="team-role-badge team-role-badge--comentor">Co-Mentor</div>
+            <h3>Nkechi Ahanonye</h3>
+            <p>Specialization TBC</p>
+          </div>
+
+          <div class="team-card team-card--comentor">
+            <div class="team-avatar team-avatar--sm" style="background:#84cc16;">JU</div>
+            <div class="team-role-badge team-role-badge--comentor">Co-Mentor</div>
+            <h3>Joy Ukpabi</h3>
+            <p>Specialization TBC</p>
+          </div>
+
+          <div class="team-card team-card--comentor">
+            <div class="team-avatar team-avatar--sm" style="background:#ec4899;">OG</div>
+            <div class="team-role-badge team-role-badge--comentor">Co-Mentor</div>
+            <h3>Odi Chibuzor Greg</h3>
+            <p>Specialization TBC</p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- COHORT 3 CTA BANNER -->
 <div class="cta-banner">
   <div style="max-width:640px;margin:0 auto;">
     <p style="font-size:0.8rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.7);margin-bottom:0.5rem;">Next Cohort</p>
-    <h2>Cohort 3 Starts June 6, 2026</h2>
-    <p>Applications are open. Join the next batch of DevOps practitioners and build a career-ready portfolio in 14 weeks.</p>
+    <h2>Cohort 3 Starts June 27, 2026</h2>
+    <p>Applications are open. Join the next batch of DevOps practitioners and build a career-ready portfolio in 15 weeks.</p>
     <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
       <a href="https://docs.google.com/forms/d/e/1FAIpQLSel7ai7nyb0P1qLW4vEyfB_nEsD4lUF1XG88vmAaFGBOb6hPA/viewform" target="_blank" rel="noopener" class="btn-white">Apply Now →</a>
       <a href="https://discord.pravinmishra.com/" target="_blank" rel="noopener" class="btn-outline-white">💬 Join the Community</a>
