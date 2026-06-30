@@ -99,5 +99,3 @@ aws cloudfront create-invalidation \
 hello@thecloudadvisory.com · Helsinki, Finland
 
 Community: [discord.pravinmishra.com](https://discord.pravinmishra.com/)
-
-test
